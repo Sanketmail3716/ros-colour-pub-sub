@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/sanket/work_mess/build
 include custom/CMakeFiles/custom_generate_messages_lisp.dir/progress.make
 
 custom/CMakeFiles/custom_generate_messages_lisp: /home/sanket/work_mess/devel/share/common-lisp/ros/custom/msg/colour.lisp
+custom/CMakeFiles/custom_generate_messages_lisp: /home/sanket/work_mess/devel/share/common-lisp/ros/custom/srv/add.lisp
 
 
 /home/sanket/work_mess/devel/share/common-lisp/ros/custom/msg/colour.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -61,8 +62,14 @@ custom/CMakeFiles/custom_generate_messages_lisp: /home/sanket/work_mess/devel/sh
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from custom/colour.msg"
 	cd /home/sanket/work_mess/build/custom && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/sanket/work_mess/src/custom/msg/colour.msg -Icustom:/home/sanket/work_mess/src/custom/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p custom -o /home/sanket/work_mess/devel/share/common-lisp/ros/custom/msg
 
+/home/sanket/work_mess/devel/share/common-lisp/ros/custom/srv/add.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/sanket/work_mess/devel/share/common-lisp/ros/custom/srv/add.lisp: /home/sanket/work_mess/src/custom/srv/add.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from custom/add.srv"
+	cd /home/sanket/work_mess/build/custom && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/sanket/work_mess/src/custom/srv/add.srv -Icustom:/home/sanket/work_mess/src/custom/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p custom -o /home/sanket/work_mess/devel/share/common-lisp/ros/custom/srv
+
 custom_generate_messages_lisp: custom/CMakeFiles/custom_generate_messages_lisp
 custom_generate_messages_lisp: /home/sanket/work_mess/devel/share/common-lisp/ros/custom/msg/colour.lisp
+custom_generate_messages_lisp: /home/sanket/work_mess/devel/share/common-lisp/ros/custom/srv/add.lisp
 custom_generate_messages_lisp: custom/CMakeFiles/custom_generate_messages_lisp.dir/build.make
 
 .PHONY : custom_generate_messages_lisp

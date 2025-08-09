@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/sanket/work_mess/devel/include/custom/add.h"
   "/home/sanket/work_mess/devel/include/custom/colour.h"
   "CMakeFiles/custom_generate_messages_cpp"
 )

@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/home/sanket/work_mess/src/custom/msg/colour.msg"
-services_str = ""
+services_str = "/home/sanket/work_mess/src/custom/srv/add.srv"
 pkg_name = "custom"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

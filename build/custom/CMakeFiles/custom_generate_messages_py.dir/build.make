@@ -54,7 +54,9 @@ CMAKE_BINARY_DIR = /home/sanket/work_mess/build
 include custom/CMakeFiles/custom_generate_messages_py.dir/progress.make
 
 custom/CMakeFiles/custom_generate_messages_py: /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/msg/_colour.py
+custom/CMakeFiles/custom_generate_messages_py: /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv/_add.py
 custom/CMakeFiles/custom_generate_messages_py: /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/msg/__init__.py
+custom/CMakeFiles/custom_generate_messages_py: /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv/__init__.py
 
 
 /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/msg/_colour.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
@@ -62,14 +64,28 @@ custom/CMakeFiles/custom_generate_messages_py: /home/sanket/work_mess/devel/lib/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG custom/colour"
 	cd /home/sanket/work_mess/build/custom && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/sanket/work_mess/src/custom/msg/colour.msg -Icustom:/home/sanket/work_mess/src/custom/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p custom -o /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/msg
 
+/home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv/_add.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv/_add.py: /home/sanket/work_mess/src/custom/srv/add.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV custom/add"
+	cd /home/sanket/work_mess/build/custom && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/sanket/work_mess/src/custom/srv/add.srv -Icustom:/home/sanket/work_mess/src/custom/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p custom -o /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv
+
 /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/msg/__init__.py: /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/msg/_colour.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for custom"
+/home/sanket/work_mess/devel/lib/python3/dist-packages/custom/msg/__init__.py: /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv/_add.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for custom"
 	cd /home/sanket/work_mess/build/custom && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/msg --initpy
+
+/home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv/__init__.py: /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/msg/_colour.py
+/home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv/__init__.py: /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv/_add.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for custom"
+	cd /home/sanket/work_mess/build/custom && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv --initpy
 
 custom_generate_messages_py: custom/CMakeFiles/custom_generate_messages_py
 custom_generate_messages_py: /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/msg/_colour.py
+custom_generate_messages_py: /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv/_add.py
 custom_generate_messages_py: /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/msg/__init__.py
+custom_generate_messages_py: /home/sanket/work_mess/devel/lib/python3/dist-packages/custom/srv/__init__.py
 custom_generate_messages_py: custom/CMakeFiles/custom_generate_messages_py.dir/build.make
 
 .PHONY : custom_generate_messages_py

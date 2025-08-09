@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "/home/sanket/work_mess/devel/share/roseus/ros/custom/manifest.l"
   "/home/sanket/work_mess/devel/share/roseus/ros/custom/msg/colour.l"
+  "/home/sanket/work_mess/devel/share/roseus/ros/custom/srv/add.l"
   "CMakeFiles/custom_generate_messages_eus"
 )
 

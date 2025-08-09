@@ -1,2 +1,2 @@
 set(custom_MESSAGE_FILES "/home/sanket/work_mess/src/custom/msg/colour.msg")
-set(custom_SERVICE_FILES "")
+set(custom_SERVICE_FILES "/home/sanket/work_mess/src/custom/srv/add.srv")

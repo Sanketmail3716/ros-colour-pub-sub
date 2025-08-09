@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/sanket/work_mess/build
 include custom/CMakeFiles/custom_generate_messages_nodejs.dir/progress.make
 
 custom/CMakeFiles/custom_generate_messages_nodejs: /home/sanket/work_mess/devel/share/gennodejs/ros/custom/msg/colour.js
+custom/CMakeFiles/custom_generate_messages_nodejs: /home/sanket/work_mess/devel/share/gennodejs/ros/custom/srv/add.js
 
 
 /home/sanket/work_mess/devel/share/gennodejs/ros/custom/msg/colour.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -61,8 +62,14 @@ custom/CMakeFiles/custom_generate_messages_nodejs: /home/sanket/work_mess/devel/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from custom/colour.msg"
 	cd /home/sanket/work_mess/build/custom && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/sanket/work_mess/src/custom/msg/colour.msg -Icustom:/home/sanket/work_mess/src/custom/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p custom -o /home/sanket/work_mess/devel/share/gennodejs/ros/custom/msg
 
+/home/sanket/work_mess/devel/share/gennodejs/ros/custom/srv/add.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/sanket/work_mess/devel/share/gennodejs/ros/custom/srv/add.js: /home/sanket/work_mess/src/custom/srv/add.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from custom/add.srv"
+	cd /home/sanket/work_mess/build/custom && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/sanket/work_mess/src/custom/srv/add.srv -Icustom:/home/sanket/work_mess/src/custom/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p custom -o /home/sanket/work_mess/devel/share/gennodejs/ros/custom/srv
+
 custom_generate_messages_nodejs: custom/CMakeFiles/custom_generate_messages_nodejs
 custom_generate_messages_nodejs: /home/sanket/work_mess/devel/share/gennodejs/ros/custom/msg/colour.js
+custom_generate_messages_nodejs: /home/sanket/work_mess/devel/share/gennodejs/ros/custom/srv/add.js
 custom_generate_messages_nodejs: custom/CMakeFiles/custom_generate_messages_nodejs.dir/build.make
 
 .PHONY : custom_generate_messages_nodejs

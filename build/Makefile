@@ -311,6 +311,19 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named custom_generate_messages_eus
+
+# Build rule for target.
+custom_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 custom_generate_messages_eus
+.PHONY : custom_generate_messages_eus
+
+# fast build rule for target.
+custom_generate_messages_eus/fast:
+	$(MAKE) -f custom/CMakeFiles/custom_generate_messages_eus.dir/build.make custom/CMakeFiles/custom_generate_messages_eus.dir/build
+.PHONY : custom_generate_messages_eus/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -519,6 +532,32 @@ _custom_generate_messages_check_deps_colour/fast:
 .PHONY : _custom_generate_messages_check_deps_colour/fast
 
 #=============================================================================
+# Target rules for targets named _custom_generate_messages_check_deps_add
+
+# Build rule for target.
+_custom_generate_messages_check_deps_add: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _custom_generate_messages_check_deps_add
+.PHONY : _custom_generate_messages_check_deps_add
+
+# fast build rule for target.
+_custom_generate_messages_check_deps_add/fast:
+	$(MAKE) -f custom/CMakeFiles/_custom_generate_messages_check_deps_add.dir/build.make custom/CMakeFiles/_custom_generate_messages_check_deps_add.dir/build
+.PHONY : _custom_generate_messages_check_deps_add/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_eus
 
 # Build rule for target.
@@ -609,32 +648,6 @@ custom_genpy/fast:
 	$(MAKE) -f custom/CMakeFiles/custom_genpy.dir/build.make custom/CMakeFiles/custom_genpy.dir/build
 .PHONY : custom_genpy/fast
 
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named custom_generate_messages_eus
-
-# Build rule for target.
-custom_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 custom_generate_messages_eus
-.PHONY : custom_generate_messages_eus
-
-# fast build rule for target.
-custom_generate_messages_eus/fast:
-	$(MAKE) -f custom/CMakeFiles/custom_generate_messages_eus.dir/build.make custom/CMakeFiles/custom_generate_messages_eus.dir/build
-.PHONY : custom_generate_messages_eus/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -659,6 +672,7 @@ help:
 	@echo "... gtest"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... custom_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... custom_generate_messages_nodejs"
@@ -675,6 +689,8 @@ help:
 	@echo "... custom_generate_messages"
 	@echo "... custom_geneus"
 	@echo "... _custom_generate_messages_check_deps_colour"
+	@echo "... _custom_generate_messages_check_deps_add"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... custom_generate_messages_cpp"
 	@echo "... custom_genlisp"
@@ -682,8 +698,6 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... custom_generate_messages_py"
 	@echo "... custom_genpy"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... custom_generate_messages_eus"
 .PHONY : help
 
 

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/sanket/work_mess/devel/share/common-lisp/ros/custom/msg/colour.lisp"
+  "/home/sanket/work_mess/devel/share/common-lisp/ros/custom/srv/add.lisp"
   "CMakeFiles/custom_generate_messages_lisp"
 )
 

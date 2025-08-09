@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/sanket/work_mess/build
 include custom/CMakeFiles/custom_generate_messages_eus.dir/progress.make
 
 custom/CMakeFiles/custom_generate_messages_eus: /home/sanket/work_mess/devel/share/roseus/ros/custom/msg/colour.l
+custom/CMakeFiles/custom_generate_messages_eus: /home/sanket/work_mess/devel/share/roseus/ros/custom/srv/add.l
 custom/CMakeFiles/custom_generate_messages_eus: /home/sanket/work_mess/devel/share/roseus/ros/custom/manifest.l
 
 
@@ -62,12 +63,18 @@ custom/CMakeFiles/custom_generate_messages_eus: /home/sanket/work_mess/devel/sha
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from custom/colour.msg"
 	cd /home/sanket/work_mess/build/custom && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/sanket/work_mess/src/custom/msg/colour.msg -Icustom:/home/sanket/work_mess/src/custom/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p custom -o /home/sanket/work_mess/devel/share/roseus/ros/custom/msg
 
+/home/sanket/work_mess/devel/share/roseus/ros/custom/srv/add.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/sanket/work_mess/devel/share/roseus/ros/custom/srv/add.l: /home/sanket/work_mess/src/custom/srv/add.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from custom/add.srv"
+	cd /home/sanket/work_mess/build/custom && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/sanket/work_mess/src/custom/srv/add.srv -Icustom:/home/sanket/work_mess/src/custom/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p custom -o /home/sanket/work_mess/devel/share/roseus/ros/custom/srv
+
 /home/sanket/work_mess/devel/share/roseus/ros/custom/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for custom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sanket/work_mess/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for custom"
 	cd /home/sanket/work_mess/build/custom && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/sanket/work_mess/devel/share/roseus/ros/custom custom std_msgs
 
 custom_generate_messages_eus: custom/CMakeFiles/custom_generate_messages_eus
 custom_generate_messages_eus: /home/sanket/work_mess/devel/share/roseus/ros/custom/msg/colour.l
+custom_generate_messages_eus: /home/sanket/work_mess/devel/share/roseus/ros/custom/srv/add.l
 custom_generate_messages_eus: /home/sanket/work_mess/devel/share/roseus/ros/custom/manifest.l
 custom_generate_messages_eus: custom/CMakeFiles/custom_generate_messages_eus.dir/build.make
 

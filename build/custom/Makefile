@@ -78,6 +78,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -89,6 +100,17 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -112,28 +134,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -196,6 +196,21 @@ roscpp_generate_messages_lisp: custom/CMakeFiles/roscpp_generate_messages_lisp.d
 roscpp_generate_messages_lisp/fast:
 	cd /home/sanket/work_mess/build && $(MAKE) -f custom/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make custom/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
+
+# Convenience name for target.
+custom/CMakeFiles/custom_generate_messages_eus.dir/rule:
+	cd /home/sanket/work_mess/build && $(MAKE) -f CMakeFiles/Makefile2 custom/CMakeFiles/custom_generate_messages_eus.dir/rule
+.PHONY : custom/CMakeFiles/custom_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+custom_generate_messages_eus: custom/CMakeFiles/custom_generate_messages_eus.dir/rule
+
+.PHONY : custom_generate_messages_eus
+
+# fast build rule for target.
+custom_generate_messages_eus/fast:
+	cd /home/sanket/work_mess/build && $(MAKE) -f custom/CMakeFiles/custom_generate_messages_eus.dir/build.make custom/CMakeFiles/custom_generate_messages_eus.dir/build
+.PHONY : custom_generate_messages_eus/fast
 
 # Convenience name for target.
 custom/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
@@ -438,6 +453,36 @@ _custom_generate_messages_check_deps_colour/fast:
 .PHONY : _custom_generate_messages_check_deps_colour/fast
 
 # Convenience name for target.
+custom/CMakeFiles/_custom_generate_messages_check_deps_add.dir/rule:
+	cd /home/sanket/work_mess/build && $(MAKE) -f CMakeFiles/Makefile2 custom/CMakeFiles/_custom_generate_messages_check_deps_add.dir/rule
+.PHONY : custom/CMakeFiles/_custom_generate_messages_check_deps_add.dir/rule
+
+# Convenience name for target.
+_custom_generate_messages_check_deps_add: custom/CMakeFiles/_custom_generate_messages_check_deps_add.dir/rule
+
+.PHONY : _custom_generate_messages_check_deps_add
+
+# fast build rule for target.
+_custom_generate_messages_check_deps_add/fast:
+	cd /home/sanket/work_mess/build && $(MAKE) -f custom/CMakeFiles/_custom_generate_messages_check_deps_add.dir/build.make custom/CMakeFiles/_custom_generate_messages_check_deps_add.dir/build
+.PHONY : _custom_generate_messages_check_deps_add/fast
+
+# Convenience name for target.
+custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/sanket/work_mess/build && $(MAKE) -f CMakeFiles/Makefile2 custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/sanket/work_mess/build && $(MAKE) -f custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
 custom/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
 	cd /home/sanket/work_mess/build && $(MAKE) -f CMakeFiles/Makefile2 custom/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : custom/CMakeFiles/roscpp_generate_messages_eus.dir/rule
@@ -542,36 +587,6 @@ custom_genpy/fast:
 	cd /home/sanket/work_mess/build && $(MAKE) -f custom/CMakeFiles/custom_genpy.dir/build.make custom/CMakeFiles/custom_genpy.dir/build
 .PHONY : custom_genpy/fast
 
-# Convenience name for target.
-custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/sanket/work_mess/build && $(MAKE) -f CMakeFiles/Makefile2 custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/sanket/work_mess/build && $(MAKE) -f custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make custom/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-custom/CMakeFiles/custom_generate_messages_eus.dir/rule:
-	cd /home/sanket/work_mess/build && $(MAKE) -f CMakeFiles/Makefile2 custom/CMakeFiles/custom_generate_messages_eus.dir/rule
-.PHONY : custom/CMakeFiles/custom_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-custom_generate_messages_eus: custom/CMakeFiles/custom_generate_messages_eus.dir/rule
-
-.PHONY : custom_generate_messages_eus
-
-# fast build rule for target.
-custom_generate_messages_eus/fast:
-	cd /home/sanket/work_mess/build && $(MAKE) -f custom/CMakeFiles/custom_generate_messages_eus.dir/build.make custom/CMakeFiles/custom_generate_messages_eus.dir/build
-.PHONY : custom_generate_messages_eus/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -582,6 +597,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... edit_cache"
+	@echo "... custom_generate_messages_eus"
 	@echo "... install/local"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
@@ -599,6 +616,9 @@ help:
 	@echo "... custom_generate_messages"
 	@echo "... custom_geneus"
 	@echo "... _custom_generate_messages_check_deps_colour"
+	@echo "... _custom_generate_messages_check_deps_add"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... test"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... custom_generate_messages_cpp"
@@ -608,10 +628,6 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... custom_generate_messages_py"
 	@echo "... custom_genpy"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... test"
-	@echo "... custom_generate_messages_eus"
-	@echo "... edit_cache"
 .PHONY : help
 
 
