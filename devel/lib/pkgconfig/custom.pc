@@ -1,0 +1,8 @@
+prefix=/home/sanket/work_mess/devel
+
+Name: custom
+Description: Description of custom
+Version: 0.0.0
+Cflags: -I/home/sanket/work_mess/devel/include
+Libs: -L${prefix}/lib 
+Requires: 
