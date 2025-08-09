@@ -1,0 +1,8 @@
+prefix=/home/sanket/work_mess/devel
+
+Name: pack
+Description: Description of pack
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

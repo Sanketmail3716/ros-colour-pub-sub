@@ -1,0 +1,2 @@
+custom:pack
+-DCATKIN_DEVEL_PREFIX=/home/sanket/work_mess/devel -DCMAKE_INSTALL_PREFIX=/home/sanket/work_mess/install -G Unix Makefiles
