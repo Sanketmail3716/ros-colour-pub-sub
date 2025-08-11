@@ -12,3 +12,13 @@ if __name__ == "__main__":
     service = rospy.Service("add", add, add_handler)  # Capital S
     rospy.loginfo("Add service is ready.")
     rospy.spin()
+
+"""   
+
+if __name__ == "__main__":
+    rospy.init_node('add_server', anonymous=True)
+    service = rospy.Service("add", add, add_handler)  # Capital S
+    rospy.loginfo("Add service is ready.")
+    rospy.spin()
+
+"""
