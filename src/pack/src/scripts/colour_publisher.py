@@ -12,7 +12,7 @@ color.r = 250
 color.g = 0
 color.b = 255
 color.a = 0
-color.name = "White"
+color.name = "New_colur"
 
 while not rospy.is_shutdown():
   
